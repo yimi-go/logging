@@ -1,3 +1,4 @@
+// Package hook provide a logger wrapper that allow capture the logging method and parameters.
 package hook
 
 import (
@@ -127,6 +128,8 @@ func (f *hookedFactory) Logger(name string) logging.Logger {
 	}
 }
 
+// Hooked creates a new Factory that produces new hooked Logger which can capture
+// method name and parameters once any logging method was called.
 func Hooked(factory logging.Factory, onLog func(meth string, param ...any)) logging.Factory {
 	return &hookedFactory{
 		factory: factory,

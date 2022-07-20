@@ -1,5 +1,6 @@
 package logging
 
+// NewNopLoggerFactory returns a Factory that create Loggers that print nothing and enabled none Levels.
 func NewNopLoggerFactory() Factory {
 	return &nopLoggerFactory{}
 }
