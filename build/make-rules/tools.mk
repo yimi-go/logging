@@ -9,7 +9,7 @@ tools.verify.%:
 
 .PHONY: install.golangci-lint
 install.golangci-lint:
-	@curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.46.2
+	@curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.47.1
 
 .PHONY: install.go-junit-report
 install.go-junit-report:
