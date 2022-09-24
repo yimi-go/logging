@@ -13,7 +13,7 @@ type Level int32
 const (
 	// DebugLevel is a debug log level.
 	DebugLevel Level = iota - 1
-	// InfoLevel is a info log level, the default level.
+	// InfoLevel is an info log level, the default level.
 	InfoLevel
 	// WarnLevel is a warn log level.
 	WarnLevel

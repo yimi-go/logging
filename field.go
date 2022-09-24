@@ -37,15 +37,15 @@ const (
 	StringType
 	// TimeType indicates that the field carries a time.Time.
 	TimeType
-	// Uint64Type indicates that the field carries a uint64.
+	// Uint64Type indicates that the field carries an uint64.
 	Uint64Type
-	// Uint32Type indicates that the field carries a uint32.
+	// Uint32Type indicates that the field carries an uint32.
 	Uint32Type
-	// Uint16Type indicates that the field carries a uint16.
+	// Uint16Type indicates that the field carries an uint16.
 	Uint16Type
-	// Uint8Type indicates that the field carries a uint8.
+	// Uint8Type indicates that the field carries an uint8.
 	Uint8Type
-	// UintptrType indicates that the field carries a uintptr.
+	// UintptrType indicates that the field carries an uintptr.
 	UintptrType
 	// StringerType indicates that the field carries a fmt.Stringer.
 	StringerType
