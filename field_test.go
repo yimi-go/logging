@@ -557,7 +557,7 @@ func TestTimep(t *testing.T) {
 	}
 }
 
-func TestWithFieldContext(t *testing.T) {
+func TestNewContext(t *testing.T) {
 	field := sf("foo", "bar")
 	ctx := NewContext(context.Background(), field)
 	fields, ok := ctx.Value(fieldKey{}).([]Field)
@@ -570,6 +570,12 @@ func TestWithFieldContext(t *testing.T) {
 	if !reflect.DeepEqual(field, fields[0]) {
 		t.Errorf("want %v, got %v", field, fields[0])
 	}
+	ctx = NewContext(ctx, sf("a", "b"))
+	fields, ok = ctx.Value(fieldKey{}).([]Field)
+	assert.True(t, ok)
+	assert.Len(t, fields, 2)
+	assert.Equal(t, field, fields[0])
+	assert.Equal(t, sf("a", "b"), fields[1])
 }
 
 func TestUint(t *testing.T) {

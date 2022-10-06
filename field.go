@@ -382,7 +382,9 @@ type fieldKey struct{}
 
 // NewContext wraps fields into a new context and return it.
 func NewContext(ctx context.Context, field ...Field) context.Context {
-	return context.WithValue(ctx, fieldKey{}, field)
+	fields, _ := ctx.Value(fieldKey{}).([]Field)
+	fields = append(fields, field...)
+	return context.WithValue(ctx, fieldKey{}, fields)
 }
 
 // WithContextField tries extract fields from context and returns a Logger with these fields.
