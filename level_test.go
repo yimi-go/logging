@@ -10,8 +10,8 @@ import (
 func TestLevel_String(t *testing.T) {
 	tests := []struct {
 		name string
-		l    Level
 		want string
+		l    Level
 	}{
 		{
 			name: "debug",
@@ -102,8 +102,8 @@ func TestLevel_Enabled(t *testing.T) {
 func TestLevel_MarshalYAML(t *testing.T) {
 	tests := []struct {
 		name    string
-		l       Level
 		want    string
+		l       Level
 		wantErr bool
 	}{
 		{

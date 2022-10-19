@@ -66,9 +66,9 @@ type Field interface {
 }
 
 type field struct {
+	val any
 	key string
 	typ FieldType
-	val any
 }
 
 func (f field) Key() string     { return f.key }

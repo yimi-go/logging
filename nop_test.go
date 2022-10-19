@@ -6,7 +6,7 @@ import (
 )
 
 func sf(key, value string) Field {
-	return field{key, StringType, value}
+	return field{value, key, StringType}
 }
 
 func TestNopLogger(t *testing.T) {
